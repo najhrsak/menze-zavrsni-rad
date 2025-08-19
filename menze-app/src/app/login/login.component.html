@@ -1,0 +1,21 @@
+<div *ngIf="!blagajna">
+  <form method="get">
+    <br/>
+    <label>Username:</label>
+    <br/>
+    <input type="text" #username>
+    <br/><br/>
+    <label>Password:</label>
+    <br/>
+    <input type="password" #password>
+    <br/><br/>
+    <button (click)="login(username.value, password.value);">Login </button>
+    </form>
+</div>
+
+<div *ngIf="blagajna">
+  <p>Pozdrav {{blagajna.naziv}}!</p>
+  <br/>
+  <p>Prijavljeni ste, želite li se odjaviti?</p>
+  <button (click)="logout()">ODJAVA</button>
+</div>

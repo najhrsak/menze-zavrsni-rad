@@ -1,0 +1,29 @@
+<div *ngIf="jela && !izdan" >
+  <li *ngFor="let jelo of jela">
+    <div class="jela">
+      <p class="naziv">{{jelo.naziv}} - {{jelo.cijena}}€</p>
+      <input type="number" value="1" class="kolicina" #num/>
+      <button class="gumb" (click)="addJelo(jelo, num.valueAsNumber)">+</button>
+      <br/>
+    </div>
+  </li>
+  <br/>
+  <button class="izdaj" (click)="izdajRacun()">Izdaj Račun</button>
+</div>
+<br/>
+<br/>
+<div *ngIf="racun">
+  <p>Šifra racuna: {{racun.uuid}}</p>
+  <p>Restoran: {{racun.menza}}</p>
+  <li *ngFor="let jelo of racun.jela">
+    <p>{{jelo.naziv}} - {{jelo.cijena}}€</p>
+  </li>
+  <p>Blagajna: {{racun.blagajna}}</p>
+</div>
+
+<div *ngIf="racun && izdan">
+  <p>Suma: {{racun.suma}}</p>
+  <p>Datum: {{racun.vrijemeIzdavanja}}</p>
+  <br/>
+  <button (click)="noviRacun()">Novi Račun</button>
+</div>

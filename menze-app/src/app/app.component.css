@@ -1,0 +1,31 @@
+/*
+nav{
+  padding: 5px;
+}
+nav a{
+  padding: 10px;
+  border-radius: 8px;
+  border: black 1px solid;
+
+}
+nav a:link{
+  text-decoration: none;
+  color:black;
+}
+
+nav a:active{
+  text-decoration: none;
+  color:black;
+
+}
+
+nav a:visited{
+  text-decoration: none;
+  color:black;
+
+}
+
+nav a:hover{
+  background-color: lightslategray;
+}
+*/

@@ -1,0 +1,10 @@
+<h1>Menze</h1>
+<nav>
+  <a routerLink="menze/nazivi">Menze</a>
+  <a *ngIf="isLoggedIn" routerLink="/info">Info</a>
+  <a *ngIf="isLoggedIn" routerLink="/izdaj-racun">Izdaj račun</a>
+  <a *ngIf="!isLoggedIn" routerLink="/login">Prijava</a>
+  <a *ngIf="isLoggedIn" routerLink="/login">Odjava</a>
+</nav>
+
+<router-outlet></router-outlet>

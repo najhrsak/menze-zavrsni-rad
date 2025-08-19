@@ -1,0 +1,22 @@
+<div *ngIf="menza">
+  <h2>{{menza.naziv}}</h2>
+  <br/>
+  <p>Adresa: {{menza.adresa}}</p>
+  <br/>
+  <label for="info">Informacije:</label>
+  <br/>
+  <textarea id="info" #info>{{menza.info}}</textarea>
+  <br/>
+  <label for="rV">Radno vrijeme:</label>
+  <br/>
+  <textarea id="rV" #radnoVrijeme>{{menza.radnoVrijeme}}</textarea>
+  <br/>
+  <label for="meni">Meni:</label>
+  <br/>
+  <textarea id="meni" #meni>{{menza.meni}}</textarea>
+  <br/>
+  <button (click)="edit(info.value, radnoVrijeme.value, meni.value)">UREDI</button>
+
+  <button *ngIf="isGuzva" (click)="setGuzva(0)">Nije guzva</button>
+  <button *ngIf="!isGuzva" (click)="setGuzva(1)">Guzva je</button>
+</div>

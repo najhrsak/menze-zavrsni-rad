@@ -1,0 +1,20 @@
+<div class="trazilica"><input id="search" type="text" placeholder="Unesite naziv menze..."
+       [(ngModel)]="searchText" (ngModelChange)="textChange()"/></div>
+<br/>
+<ul class="nazivi">
+  <li *ngFor="let menza of menze" >
+    <div style="display: flex">
+      <div
+        (click)= "onSelect(menza)"
+           [class.selected]="menza === selectedMenza">
+        <span class="badge">{{menza.naziv}}</span>
+      </div>
+    </div>
+    <br/>
+  </li>
+</ul>
+
+<div *ngIf="selectedMenza">
+  <app-menza [menza]="selectedMenza"> </app-menza>
+  <br/>
+</div>

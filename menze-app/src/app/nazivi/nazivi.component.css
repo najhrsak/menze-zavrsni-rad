@@ -1,0 +1,11 @@
+.trazilica{
+  width: 50%;
+  align-content: center;
+}
+ul{
+  list-style: none;
+}
+.trazilica input{
+  width:80%;
+  border: none;
+}
